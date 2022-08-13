@@ -1,4 +1,4 @@
-# AnalisaNumPerguntas
+# Analisa Número de Perguntas
 Script que dada comversa exportada do WhatsApp, analisa o número de perguntas feita por cada um.
 
 - funcina de janeiro ate agosto, independe do ano.
