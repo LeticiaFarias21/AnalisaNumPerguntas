@@ -9,11 +9,11 @@ Script que dada comversa exportada do WhatsApp, analisa o número de perguntas f
 - não funciona p/ grupos.
 
 Para exporta o arquivo.txt no WhatsApp, basta:
-Iphone:
+ ### Iphone:
 - entrar na conversa
 - clicar no contato 
 - na parte inferior, exportar conversa
-Android:
+ ### Android:
 - Abra a conversa
 - Clique nos 3 pontinhos
 - Selecione exportar conversa
