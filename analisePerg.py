@@ -1,6 +1,6 @@
-# funcina de jan ate ago, independe do ano
+# funcina de jan ate dez, independe do ano
 # analizaPerg(arquivo txt, nome1, nome2)
-# nome do aruivo em Str assim, ele deve esta no msm diretorio do Scrip
+# nome do aruivo em Str assim, ele deve esta no msm diretorio do Script
 # nome da pesssoas deve ser de acordo com o nome delas no arquivo de txt
 # usa como base conversa exportada do wpp
 # não funciona p/ grupos.
@@ -13,7 +13,7 @@ def analisePerg(nomeArquivo, nome1, nome2):
     perguntasNome1 = []
     perguntasNome2 = []
 
-    PerguntasPorMes = [8]
+    PerguntasPorMes = [12]
 
     DIAS = 213
 
@@ -38,9 +38,9 @@ def analisePerg(nomeArquivo, nome1, nome2):
     # Separar por quem fez a pergunta
     #Por mes
     #analisar a data e separar o texto
-    #Parametro 1 ate 8
+    #Parametro 1 ate 12
 
-    jan, fev, mar, abr, mai, jun, jul, ago = 0, 0, 0, 0, 0, 0, 0, 0
+    jan, fev, mar, abr, mai, jun, jul, ago, setm, out, nov, dez = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     for msg in perguntasNome2:
         texto = msg.split("/")
@@ -60,11 +60,20 @@ def analisePerg(nomeArquivo, nome1, nome2):
         elif texto[1] == "07":
             jul += 1
         elif texto[1] == "08":
-            ago +=1
+            ago += 1
+        elif texto[1] == "09":
+            setm += 1
+        elif texto[1] == "10":
+            out += 1
+        elif texto[1] == "11":
+            nov += 1
+        elif texto[1] == "12":
+            dez += 1
+         
 
-    perguntasPorMesNome2 = [jan, fev, mar, abr ,mai, jun, jul, ago]    
+    perguntasPorMesNome2 = [ jan, fev, mar, abr, mai, jun, jul, ago, setm, out, nov, dez]    
 
-    ljan, lfev, lmar, labr, lmai, ljun, ljul, lago = 0, 0, 0, 0, 0, 0, 0, 0
+    ljan, lfev, lmar, labr, lmai, ljun, ljul, lago, lset, lout, lnov, ldez = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     for msg in perguntasNome1:
         
@@ -86,8 +95,16 @@ def analisePerg(nomeArquivo, nome1, nome2):
             ljul += 1
         elif texto[1] == "08":
             lago +=1
+        elif texto[1] == "09":
+            lsetm += 1
+        elif texto[1] == "10":
+            lout += 1
+        elif texto[1] == "11":
+            lnov += 1
+        elif texto[1] == "12":
+            ldez += 1
 
-    perguntasPorMesNome1 = [ljan, lfev, lmar, labr ,lmai, ljun, ljul, lago]
+    perguntasPorMesNome1 = [ljan, lfev, lmar, labr, lmai, ljun, ljul, lago, lset, lout, lnov, ldez]
 
     print("Numero total de perguntas = ", len(perguntas))
     print("Numero total de ", nome2, " = ", len(perguntasNome2))
